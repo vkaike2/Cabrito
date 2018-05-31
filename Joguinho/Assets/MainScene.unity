@@ -9523,7 +9523,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.452571
+  orthographic size: 12.94
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9546,7 +9546,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733154645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.22, y: -4.4, z: -10}
+  m_LocalPosition: {x: -4.22, y: -3.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25404,7 +25404,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 93cc5ee1df7cc4544b30bba10095b336, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ae5b772642f2c9489749c050a5a55ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -25421,7 +25421,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1807901544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18, y: -12.61, z: -9.38}
+  m_LocalPosition: {x: -18, y: -12.675, z: -0.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1137980737}
@@ -25460,8 +25460,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.026434898, y: -0.03818369}
-  m_Size: {x: 0.8897381, y: 1.9236326}
+  m_Offset: {x: -0.026434898, y: -0.023297787}
+  m_Size: {x: 0.8897381, y: 1.8938608}
   m_Direction: 0
 --- !u!114 &1807901551
 MonoBehaviour:

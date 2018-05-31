@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 93cc5ee1df7cc4544b30bba10095b336
-timeCreated: 1525147171
-licenseType: Free
+guid: 3ae5b772642f2c9489749c050a5a55ed
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playerBase_idle_0
-    21300002: playerBase_idle_1
-    21300004: playerBase_idle_2
-    21300006: playerBase_idle_3
-    21300008: playerBase_idle_4
-    21300010: playerBase_idle_5
-    21300012: playerBase_idle_6
-    21300014: playerBase_idle_7
+    21300000: player_idle_0
+    21300002: player_idle_1
+    21300004: player_idle_2
+    21300006: player_idle_3
+    21300008: player_idle_4
+    21300010: player_idle_5
+    21300012: player_idle_6
+    21300014: player_idle_7
+    21300016: player_idle_8
+    21300018: player_idle_9
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 5
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,18 +53,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -74,7 +77,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -84,7 +88,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
+  - serializedVersion: 2
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -98,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playerBase_idle_0
+      name: player_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,8 +116,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c04947cbdfacae648b86df6054b736b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_1
+      name: player_idle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -125,8 +136,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0808dae55d1325949a9483530bee761c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_2
+      name: player_idle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -139,8 +156,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c616be41866fd9e428f876cc24733ac4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_3
+      name: player_idle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -153,8 +176,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b88e40c0f75e326478a3127dacfc89a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_4
+      name: player_idle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -167,8 +196,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 629d2c5faa99aab4294745434cfbdf27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_5
+      name: player_idle_5
       rect:
         serializedVersion: 2
         x: 320
@@ -181,8 +216,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 061794ca27c2b1a46be5b87c9ded861a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_6
+      name: player_idle_6
       rect:
         serializedVersion: 2
         x: 384
@@ -195,8 +236,14 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c0c460ae8f12861428c8d353b3f1cef9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: playerBase_idle_7
+      name: player_idle_7
       rect:
         serializedVersion: 2
         x: 448
@@ -209,8 +256,60 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 95d4550629e16fe4286ba93aca7a3dbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_idle_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b532e046376d32468a6c046f208cef1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_idle_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66532076841b32d47ada591dca5286ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: ae273301abfc8334c97f7967acee4024
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
