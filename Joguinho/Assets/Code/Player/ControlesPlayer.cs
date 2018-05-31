@@ -15,30 +15,31 @@ public class ControlesPlayer : MonoBehaviour
 	private ControllerPulo controllerPulo;
 	private ControllerPuloLadoE controllerPuloLadoE;
 	private ControllerPuloLadoD controllerPuloLadoD;
-	
-	void Start ()
-	{
+    private Animator liminha;
+
+	void Start () {
 		servicePlayer = GetComponent<ServicePlayer>();
-		controllerPulo = GameObject.Find("pulo").GetComponent<ControllerPulo> ();
-		controllerPuloLadoE = GameObject.Find("puloLado_E").GetComponent<ControllerPuloLadoE> ();
-		controllerPuloLadoD = GameObject.Find("puloLado_D").GetComponent<ControllerPuloLadoD> ();
+		controllerPulo = GetComponentInChildren<ControllerPulo> ();
+		controllerPuloLadoE = GetComponentInChildren<ControllerPuloLadoE> ();
+		controllerPuloLadoD = GetComponentInChildren<ControllerPuloLadoD> ();
+        liminha = this.GetComponent<Animator>();
 
 		rb2d = GetComponent<Rigidbody2D> ();
 		cdwPulo = 0;
 	}
 
-	void FixedUpdate ()
-	{
-		servicePlayer.andar(rb2d,VELOCIDADE_ANDAR);
+	void FixedUpdate ()	{
+		servicePlayer.andar(rb2d,VELOCIDADE_ANDAR, liminha);
 		servicePlayer.pular(rb2d,ALTURA_PULO,controllerPulo.estaNoChao);
-
-		if(controllerPulo.estaNoChao == false){
+		float x = transform.localScale.x;
+		
+		if(controllerPulo.estaNoChao == false) {
 			cdwPulo = cdwPulo + Time.deltaTime;
 			if(cdwPulo >= 0.2f){
 				cdwPulo = servicePlayer.puloLado(rb2d,controllerPuloLadoE.encostouEsquerda,controllerPulo.estaNoChao,"Esquerda",DISTANCIA_PULO_X,DISTANCIA_PULO_Y);
 				cdwPulo = servicePlayer.puloLado(rb2d,controllerPuloLadoD.encostouDireita,controllerPulo.estaNoChao,"Direita",DISTANCIA_PULO_X,DISTANCIA_PULO_Y);
 			}
-		}else{
+		} else {
 			cdwPulo = 0;
 		}
 

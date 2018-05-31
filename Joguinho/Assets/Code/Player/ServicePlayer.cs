@@ -7,13 +7,17 @@ public class ServicePlayer : MonoBehaviour {
 	private bool estaPulando = false;
 	private bool estaPulandoLado = false;
 
-	public void andar (Rigidbody2D rb2d, float VELOCIDADE_ANDAR)
+	public void andar (Rigidbody2D rb2d, float VELOCIDADE_ANDAR, Animator liminha)
 	{
 		float movimentoHorizontal = Input.GetAxisRaw ("Horizontal");
 		Vector2 movimenta = new Vector2 (movimentoHorizontal, 0);
+		liminha.SetBool("Corre", false);
+		
 		if (movimentoHorizontal != 0) {
 			rb2d.AddForce (movimenta * VELOCIDADE_ANDAR);
-		} 
+			liminha.SetBool("Corre", true);
+		}
+		
 	}
 
 	public void pular (Rigidbody2D rb2d, float ALTURA_PULO, bool estaNoChao)
