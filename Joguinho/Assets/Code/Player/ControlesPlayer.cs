@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Depreciada, utilizar provisoriamente apenas para resource found.
 public class ControlesPlayer : MonoBehaviour
 {
 
@@ -29,8 +30,8 @@ public class ControlesPlayer : MonoBehaviour
 	}
 
 	void FixedUpdate ()	{
-		servicePlayer.andar(rb2d,VELOCIDADE_ANDAR, liminha);
-		servicePlayer.pular(rb2d,ALTURA_PULO,controllerPulo.estaNoChao);
+		// servicePlayer.andar();
+		// servicePlayer.pular(rb2d,ALTURA_PULO,controllerPulo.estaNoChao);
 		float x = transform.localScale.x;
 		
 		if(controllerPulo.estaNoChao == false) {
