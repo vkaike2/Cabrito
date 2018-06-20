@@ -25,12 +25,10 @@ public class ServicePlayer : MonoBehaviour {
 	public void andar (){
 		float move = Input.GetAxisRaw(GameUtils.AXIS_HORIZONTAL);
 		float down = Input.GetAxisRaw(GameUtils.AXIS_VERTICAL);
+	
 		Boolean isStopRun = animator.GetBool(GameUtils.ANIM_PARAM_STOP_RUN);
 		Boolean isDown = animator.GetBool(GameUtils.ANIM_PARAM_DOWN);
 		Boolean isRun = animator.GetBool(GameUtils.ANIM_PARAM_RUN);
-		/*Tem que refinar para quando o personagem muda de direção 
-			não tocar a animação de isStopRun
-		*/
 
 		if(isDown && down >= 0){
 			animator.SetBool(GameUtils.ANIM_PARAM_DOWN, false);
@@ -48,7 +46,6 @@ public class ServicePlayer : MonoBehaviour {
 			escala.x = move;
 			transform.localScale = escala;
 		} else if(isRun){
-			// Debug.Log("inicio da parada");	
 			animator.SetBool(GameUtils.ANIM_PARAM_RUN, false);
 		}	
 		
@@ -65,39 +62,6 @@ public class ServicePlayer : MonoBehaviour {
 		}else if(isJump) {
 			animator.SetBool(GameUtils.ANIM_PARAM_JUMP, false);
 		}
-		// if (pulo != 0 && estaNoChao == true) {
-		// 	if(estaPulando == false){
-		// 		body.AddForce (new Vector2 (0, jump));
-		// 		estaPulando = true;
-		// 	}
-		// }
-
-		// if(pulo == 0){
-		// 	estaPulando = false;
-		// }
-	}
-
-	public float puloLado(Rigidbody2D rb2d, bool ativador, bool estaNoChao, String lado, float DISTANCIA_PULO_X, float DISTANCIA_PULO_Y){
-		float pulo = Input.GetAxisRaw ("Jump");
-		float movimentoHorizontal = Input.GetAxisRaw ("Horizontal");
-
-		float multiplicador = 0;
-		if(lado == "Direita"){
-			multiplicador = -1;
-		}else{
-			multiplicador = 1;
-		}
-
-		if (pulo != 0 && movimentoHorizontal == multiplicador*-1 && ativador == true && estaNoChao == false) {
-			if(estaPulandoLado == false){
-				rb2d.AddForce (new Vector2 (DISTANCIA_PULO_X*multiplicador, DISTANCIA_PULO_Y));
-				estaPulandoLado = true;
-			}
-		}
-		if(pulo == 0){
-  			estaPulandoLado = false;
-		}
-		return 0;
 	}
 
 }

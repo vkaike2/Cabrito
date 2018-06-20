@@ -99,18 +99,23 @@ TextureImporter:
       name: Cadeira_Mesinha_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 7
+        y: 1
+        width: 23
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 8.5, y: -6.5}
+        - {x: 8.5, y: -3.5}
+        - {x: 5.5, y: -0.5}
+        - {x: -7.5, y: -0.5}
+        - {x: -7.5, y: -6.5}
       tessellationDetail: 0
       bones: []
-      spriteID: 43308df1ad8f7384bbd8d5cd6c69d40f
+      spriteID: 730d8a6c094b39f458f1ecc435a76e9d
       vertices: []
       indices: 
       edges: []
@@ -119,38 +124,26 @@ TextureImporter:
       name: Cadeira_Mesinha_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 31
+        y: 1
+        width: 48
+        height: 31
+      alignment: 9
+      pivot: {x: 0.45449987, y: 0.47815996}
+      border: {x: 2, y: 0, z: 6, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 18, y: 5.5}
+        - {x: 17, y: 7.5}
+        - {x: 15, y: 9.5}
+        - {x: -19, y: 9.5}
+        - {x: -21, y: 7.5}
+        - {x: -22, y: 5.5}
+        - {x: -22, y: 3.5}
+        - {x: 18, y: 3.5}
       tessellationDetail: 0
       bones: []
-      spriteID: b2f8ff746a028b342812f9a4270ae264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cadeira_Mesinha_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c16e6dec12a7b32438b87e78a90bc867
+      spriteID: 54b8737fdc48f4c45be7855c8e9ebdb9
       vertices: []
       indices: 
       edges: []
