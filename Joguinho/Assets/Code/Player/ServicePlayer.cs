@@ -52,10 +52,11 @@ public class ServicePlayer : MonoBehaviour {
 	}
 
 	public void pular () {
+		float down = Input.GetAxisRaw(GameUtils.AXIS_VERTICAL);
 		float pulo = Input.GetAxisRaw(GameUtils.AXIS_JUMP);
 		Boolean isJump = animator.GetBool(GameUtils.ANIM_PARAM_JUMP);
 		
-		if(pulo != 0 && !controllerPulo.isJump()){
+		if(pulo != 0 && !controllerPulo.isJump() && down == 0){
 			Vector2 pular = new Vector2(0, pulo);
 			body.AddForce(pular * jump);
 			animator.SetBool(GameUtils.ANIM_PARAM_JUMP, true);

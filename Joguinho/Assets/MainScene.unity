@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 270430021}
   - component: {fileID: 270430020}
   - component: {fileID: 270430019}
+  - component: {fileID: 270430023}
   m_Layer: 0
   m_Name: Layer_Objeto
   m_TagString: Untagged
@@ -1364,6 +1365,17 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
+--- !u!114 &270430023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270430015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbcd44e63a75e6489c41bdd00f3ae56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &274703930
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,6 +4265,7 @@ GameObject:
   - component: {fileID: 341486022}
   - component: {fileID: 341486021}
   - component: {fileID: 341486020}
+  - component: {fileID: 341486023}
   m_Layer: 0
   m_Name: cama
   m_TagString: Untagged
@@ -4360,6 +4373,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &341486023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 341486018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbcd44e63a75e6489c41bdd00f3ae56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733154645
 GameObject:
   m_ObjectHideFlags: 0
