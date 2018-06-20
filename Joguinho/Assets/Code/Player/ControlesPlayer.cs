@@ -34,15 +34,15 @@ public class ControlesPlayer : MonoBehaviour
 		// servicePlayer.pular(rb2d,ALTURA_PULO,controllerPulo.estaNoChao);
 		float x = transform.localScale.x;
 		
-		if(controllerPulo.estaNoChao == false) {
-			cdwPulo = cdwPulo + Time.deltaTime;
-			if(cdwPulo >= 0.2f){
-				cdwPulo = servicePlayer.puloLado(rb2d,controllerPuloLadoE.encostouEsquerda,controllerPulo.estaNoChao,"Esquerda",DISTANCIA_PULO_X,DISTANCIA_PULO_Y);
-				cdwPulo = servicePlayer.puloLado(rb2d,controllerPuloLadoD.encostouDireita,controllerPulo.estaNoChao,"Direita",DISTANCIA_PULO_X,DISTANCIA_PULO_Y);
-			}
-		} else {
-			cdwPulo = 0;
-		}
+		// if(controllerPulo.estaNoChao == false) {
+		// 	cdwPulo = cdwPulo + Time.deltaTime;
+		// 	if(cdwPulo >= 0.2f){
+		// 		cdwPulo = servicePlayer.puloLado(rb2d,controllerPuloLadoE.encostouEsquerda,controllerPulo.estaNoChao,"Esquerda",DISTANCIA_PULO_X,DISTANCIA_PULO_Y);
+		// 		cdwPulo = servicePlayer.puloLado(rb2d,controllerPuloLadoD.encostouDireita,controllerPulo.estaNoChao,"Direita",DISTANCIA_PULO_X,DISTANCIA_PULO_Y);
+		// 	}
+		// } else {
+		// 	cdwPulo = 0;
+		// }
 
 
 	}

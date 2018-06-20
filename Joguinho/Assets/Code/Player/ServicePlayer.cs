@@ -4,50 +4,67 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ServicePlayer : MonoBehaviour {
-	private bool estaPulando = false;
 	private bool estaPulandoLado = false;
 	public float speed = 50;
-	public float jump = 3;
+	public float jump = 1100;
 	private Animator animator;
 	private Rigidbody2D body;
+	private ControllerPulo controllerPulo;
 
 
 	void Start(){
 		animator = GetComponent<Animator>();		
 		body = GetComponent<Rigidbody2D>();
+		controllerPulo = GetComponentInChildren<ControllerPulo>();
 	}
 
 	void FixedUpdate ()	{
 		andar();
+		pular();
 	}
 	public void andar (){
 		float move = Input.GetAxisRaw(GameUtils.AXIS_HORIZONTAL);
-		Boolean isStopRun = animator.GetBool(GameUtils.ANIM_STOP_RUN);
-		Boolean isRun = animator.GetBool(GameUtils.ANIM_RUN);
+		float down = Input.GetAxisRaw(GameUtils.AXIS_VERTICAL);
+		Boolean isStopRun = animator.GetBool(GameUtils.ANIM_PARAM_STOP_RUN);
+		Boolean isDown = animator.GetBool(GameUtils.ANIM_PARAM_DOWN);
+		Boolean isRun = animator.GetBool(GameUtils.ANIM_PARAM_RUN);
 		/*Tem que refinar para quando o personagem muda de direção 
 			não tocar a animação de isStopRun
 		*/
-		if (move != 0 && !isStopRun) {
-			animator.SetBool(GameUtils.ANIM_RUN, true);
+
+		if(isDown && down >= 0){
+			animator.SetBool(GameUtils.ANIM_PARAM_DOWN, false);
+		}
+
+		if(down < 0){
+			Vector2 movement = new Vector2 (0, 0);
+			body.AddForce(movement);
+			animator.SetBool(GameUtils.ANIM_PARAM_DOWN, true);
+		} else if (move != 0) {
+			animator.SetBool(GameUtils.ANIM_PARAM_RUN, true);
 			Vector2 movement = new Vector2 (move, 0);
 			body.AddForce(movement * speed);
 			Vector3 escala = transform.localScale;
 			escala.x = move;
 			transform.localScale = escala;
-		} else if(isStopRun){
-			Debug.Log("parando de vez");	
-			animator.SetBool(GameUtils.ANIM_STOP_RUN, false);
 		} else if(isRun){
-			Debug.Log("inicio da parada");	
-			animator.SetBool(GameUtils.ANIM_STOP_RUN, true);
-			animator.SetBool(GameUtils.ANIM_RUN, false);
+			// Debug.Log("inicio da parada");	
+			animator.SetBool(GameUtils.ANIM_PARAM_RUN, false);
 		}	
 		
 	}
 
 	public void pular () {
-		float pulo = Input.GetAxisRaw (GameUtils.AXIS_JUMP);
+		float pulo = Input.GetAxisRaw(GameUtils.AXIS_JUMP);
+		Boolean isJump = animator.GetBool(GameUtils.ANIM_PARAM_JUMP);
 		
+		if(pulo != 0 && !controllerPulo.isJump()){
+			Vector2 pular = new Vector2(0, pulo);
+			body.AddForce(pular * jump);
+			animator.SetBool(GameUtils.ANIM_PARAM_JUMP, true);
+		}else if(isJump) {
+			animator.SetBool(GameUtils.ANIM_PARAM_JUMP, false);
+		}
 		// if (pulo != 0 && estaNoChao == true) {
 		// 	if(estaPulando == false){
 		// 		body.AddForce (new Vector2 (0, jump));
