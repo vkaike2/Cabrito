@@ -1340,7 +1340,7 @@ PlatformEffector2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 270430015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -1386,6 +1386,7 @@ GameObject:
   - component: {fileID: 274703931}
   - component: {fileID: 274703932}
   - component: {fileID: 274703933}
+  - component: {fileID: 274703934}
   m_Layer: 0
   m_Name: pulo
   m_TagString: Untagged
@@ -1443,6 +1444,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isJumping: 0
+--- !u!114 &274703934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274703930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e27aa419554d14ebb98554fb3b2046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estaPulando: 0
 --- !u!1 &279206807
 GameObject:
   m_ObjectHideFlags: 0
@@ -7633,6 +7646,7 @@ GameObject:
   - component: {fileID: 1807901551}
   - component: {fileID: 1807901549}
   - component: {fileID: 1807901545}
+  - component: {fileID: 1807901550}
   m_Layer: 0
   m_Name: Player_Test
   m_TagString: Untagged
@@ -7762,13 +7776,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1807901551
+--- !u!114 &1807901550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1807901544}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ebe584975a1fa42b71fb56c3089986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1807901551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807901544}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9731cdf965e4d2b4690e5a5316a0ccb3, type: 3}
   m_Name: 
