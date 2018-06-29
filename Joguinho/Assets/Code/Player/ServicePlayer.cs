@@ -11,7 +11,6 @@ public class ServicePlayer : MonoBehaviour {
 	private Rigidbody2D body;
 	private ControllerPulo controllerPulo;
 
-
 	void Start(){
 		animator = GetComponent<Animator>();		
 		body = GetComponent<Rigidbody2D>();
