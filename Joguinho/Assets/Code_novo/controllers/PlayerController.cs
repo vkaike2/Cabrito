@@ -23,4 +23,11 @@ public class PlayerController : MonoBehaviour {
 		playerService.atualizaDirecao();
 		playerService.atualizaAnimacao();
 	}
+
+	void travarControles(){
+		playerService.travarControles();
+	}
+	void destravarControles(){
+		playerService.destravarControles();
+	}
 }
